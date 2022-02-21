@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import sample from './Explore.mp4';
+
 import Button from 'react-bootstrap/Button';
-import Landing from './components/Landing'
-import Home from './components/Home'
+import Landing from './components/Landing/Landing'
+import Home from './components/Home/Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   return (

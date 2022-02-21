@@ -1,5 +1,5 @@
 
-import './landing.css';
+import './Landing.css';
 import sample from './Explore.mp4';
 import Button from 'react-bootstrap/Button';
 function Landing() {
