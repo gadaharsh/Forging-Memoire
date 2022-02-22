@@ -1,19 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import sample from './Explore.mp4';
+
 import Button from 'react-bootstrap/Button';
+import Landing from './components/Landing/Landing'
+import Home from './components/Home/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
+
     <div className="App">
-      {/* <video loop autoPlay muted id="myVideo">
-        <source src="Explore.mp4" type="video/mp4" />
-      </video> */}
-      <button type="button" className="btn btn-success">Success</button>
-      <video className='background-video videoTag' autoPlay loop muted>
-        <source src={sample} type='video/mp4' />
-      </video>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route exact path="/"><Landing></Landing></Route>
+          <Route exact path="/home"><Home></Home></Route> */}
+          {/* <Route path="/" element={<App />} /> */}
+          <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
 
     </div>
+
   );
 }
 
