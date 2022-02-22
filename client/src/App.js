@@ -7,13 +7,14 @@ import Home from './components/Home/Home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   return (
-    <Router>
-      <div className="App">
+
+    <div className="App">
+      <Switch>
         <Route exact path="/"><Landing></Landing></Route>
         <Route exact path="/home"><Home></Home></Route>
+      </Switch>
+    </div>
 
-      </div>
-    </Router>
   );
 }
 
