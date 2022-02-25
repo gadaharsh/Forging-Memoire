@@ -1,0 +1,40 @@
+
+ 
+ .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+  }
+  
+  .flex-container>div {
+    height: 1000px;
+    width: 100%;
+    // border: 5px solid #fff;
+  }
+  
+  .flex-container > .tropical {
+    background: url("https://source.unsplash.com/A-11N8ItHZo/1000x1000");
+  }
+  
+  .flex-container > .cold {
+    background: url("https://source.unsplash.com/D9873iLktiY/1000x1000");
+  }
+  .flex-container > .pnw {
+    background: url("https://source.unsplash.com/rEOpo4kmUzU/1000x1000");
+  }
+  .flex-container > .desert {
+    background: url("https://source.unsplash.com/N3hafr52Teg/1000x1000");
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .flex-container {
+      flex-wrap: wrap;
+    }
+  }
+  .container-fluid.main{
+    position: relative; /* To make the navbar positions relative to this container */
+    padding: 0;
+  }
+  
+  

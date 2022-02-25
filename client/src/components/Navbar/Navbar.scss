@@ -1,0 +1,34 @@
+.navigation{
+    padding-top:30px;
+    padding-bottom:30px;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1;
+  }
+  
+  .navbar-right{
+    float:right;
+    padding-right:10%;
+  }
+  
+  .navbar-right a{
+    text-decoration:none;
+    padding:10px;
+    color: #fff;
+    font-family:Arial;
+    font-weight:900;
+  }
+  
+  .navbar-right a:hover{
+    text-decoration:underline;
+  }
+  .navbar-logo{
+    padding-left:10%;
+    font-family:Arial;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff; 
+  }
+  
