@@ -13,10 +13,10 @@ function Landing() {
                 <video id="myVideo" className='background-video videoTag' autoPlay loop muted>
                     <source src={sample} type='video/mp4' />
                 </video>
-                <div className="content">
+                <div className="content" >
                     <div class="panel pink">
                         <a href="/home">
-                            <button >Get Started</button>
+                            <button style={{cursor: "pointer"}} >Get Started</button>
                         </a>
                     </div>
                 </div>
