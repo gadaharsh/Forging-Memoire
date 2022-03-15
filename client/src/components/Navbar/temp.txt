@@ -1,0 +1,39 @@
+<div className=" p-0 container">
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="Cloudy Sky" />
+                                </div>
+                                {/* <div className="tagline-right"> */}
+                                {/* <div className="tagline-right-text">The future is for workers</div> */}
+                                {/* <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="" /> */}
+                                {/* </div> */}
+                            </div>
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="Cloudy Sky" />
+                                </div>
+                                {/* <div className="tagline-right"> */}
+                                {/* <div className="tagline-right-text">The future is for workers</div> */}
+                                {/* <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="" /> */}
+                                {/* </div> */}
+                            </div>
+                            <div className="col-4">
+                                <div className="box">
+                                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="Cloudy Sky" />
+                                </div>
+                                {/* <div className="tagline-right"> */}
+                                {/* <div className="tagline-right-text">The future is for workers</div> */}
+                                {/* <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80" className="img-responsive bg-img" alt="" /> */}
+                                {/* </div> */}
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className="video-container">
+                        <video autoplay loop muted id="video-bg">
+
+                            <source src="http://bigcom.com/assets/2014/08/iChooseB.mp4" type="video/mp4" />
+
+                        </video>
+                    </div> */}
+                </div>
