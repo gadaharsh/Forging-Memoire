@@ -1,0 +1,88 @@
+.registerpage{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+.registerpage{
+    background-image: url('https://images.unsplash.com/photo-1647302628084-3dea830eb683?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    -webkit-filter: blur(40%);
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.registerpage form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 100px;
+    margin-bottom: 50px;
+    background: linear-gradient(#ced3d0, #b7e9b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+.registerpage form input::placeholder{
+    color:white;
+}
+.registerpage form input {
+    font-size: 28px;
+    letter-spacing: 3px;
+    background: transparent;
+    color: rgb(235, 230, 230);
+    padding: 0 0 10px 5px;
+    margin: 25px 0;
+    outline: none;
+}
+// form button{
+//     font-size: 28px;
+//     letter-spacing: 3px;
+//     background: transparent;
+//     color: rgb(235, 230, 230);
+//     padding: 0 0 10px 5px;
+//     margin: 25px 0;
+//     outline: none;
+// }
+.user-input {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.user-input:focus {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #00f260, #0575e6);
+    border-image-slice: 1;
+}
+
+.submit-button {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    padding: 15px 0;
+    // margin: 50px 0 0 0;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-button:hover {
+    background: rgba(255, 255, 255, .3);
+    color:#fff
+}
+.login{
+    color: white;
+}
+.login:hover{
+    color: rgb(187, 180, 180);
+}
