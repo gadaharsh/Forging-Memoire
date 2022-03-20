@@ -14,6 +14,7 @@ const methodOverride = require('method-override')
 const session = require("express-session")
 const MongoStore=require('connect-mongo')
 require('../config/passport');
+const passport=require('passport')
  
 //imports files
 const usersRoutes = require('../routes/users');
