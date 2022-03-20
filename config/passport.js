@@ -1,29 +1,53 @@
-const passport =require('passport'),LocalStrategy=require('passport-local').Strategy;
-const { compareSync } = require('bcryptjs');
-const User=require('../models/user')
+const User = require("../models/user");
+const bcrypt = require("bcryptjs");
+const localStrategy = require("passport-local").Strategy;
 
+module.exports = function (passport) {
+    passport.use(
+        new localStrategy((username, password, done) => {
+            User.findOne({
+                username:username
+            }, (err, user) => {
+                if (err) throw err;
+                if (!user) return done(null, false);
+                bcrypt.compare(password, user.password, (err, result) => {
+                    if (err) throw err;
+                    if (result === true) {
+                        return done(null, user);
+                    } else {
+                        return done(null, false);
+                    }
+                });
+            });
+        })
+    );
 
-passport.use(new LocalStrategy(
-    function(email, password, done) {
-      User.findOne({ email: email }, function (err, user) {
-        if (err) { return done(err); } //when some error occurs
-        if (!user) { return done(null, false,{message:'Incorrect email.'}); } //when email is invalid
-        if (!compareSync(password,user.password)) { return done(null, false,{message:'Incorrect password.'}); } //when password is invalid
-        return done(null, user); //when user is valid
-      });
-    }
-  ));
-
-  //persists user data inside session
-  passport.serializeUser(function(user, cb) {
-    process.nextTick(function() {
-      cb(null, { id: user.id, username: user.username });
+    passport.serializeUser((user, cb) => {
+        cb(null, user.id);
     });
-  });
-  
-  //fetches session details using session id
-  passport.deserializeUser(function(user, cb) {
-    process.nextTick(function() {
-      return cb(null, user);
+    passport.deserializeUser((id, cb) => {
+        User.findOne({
+            _id: id
+        }, (err, user) => {
+            const userInformation = {
+                username: user.username,
+                id: user.id,
+            };
+            cb(err, userInformation);
+        });
     });
-  });
+};
+
+//persists user data inside session
+//fetches session details using session id
+
+// passport.serializeUser(function(user, done) {
+//   done(null,user.id);
+//  });
+ 
+ 
+//  passport.deserializeUser(function(id, done) {
+//    User.findById(id,function(err,user){
+//      done(err,user);
+//    })
+//  });

@@ -13,11 +13,17 @@ const ejsMate = require('ejs-mate')
 const methodOverride = require('method-override')
 const session = require("express-session")
 const MongoStore=require('connect-mongo')
-require('../config/passport');
+// require('../config/passport');
 const passport=require('passport')
+const flash = require('connect-flash')
+const LocalStrategy = require('passport-local')
+const {
+    Cookie
+} = require('express-session');
  
 //imports files
 const usersRoutes = require('../routes/users');
+const User = require('../models/user');
 
 //port setup and app initialize
 const PORT = process.env.PORT || 3001;
@@ -60,11 +66,22 @@ app.use(session({
     saveUninitialized:true,
     store:MongoStore.create({mongoUrl:MONGODB_URI,collectionName:'sessions'}),
     cookie:{
-        maxAge:1000*60*60*24
+        httpOnly: true,
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7,
     }
 }))
+// app.use(session(sessionConfig))
+app.use(flash());
 app.use(passport.initialize())
 app.use(passport.session())
+require("../config/passport")(passport);
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+})
 
 
 
@@ -86,9 +103,9 @@ app.use((err, req, res, next) => {
 
 })
 
-app.get('/', (req, res) => {
-    res.send("YO");
-})
+// app.get('/', (req, res) => {
+//     res.send("YO");
+// })
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
