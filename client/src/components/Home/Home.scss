@@ -108,5 +108,37 @@ box-shadow:none;
     background:#36C; 
     color:#FFF;
 }
+.plan{
+  --tw-text-opacity: 1;
+  color: rgb(75 75 75/var(--tw-text-opacity));
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
 
+}
 
+.whereto{
+  font-size: 48px;
+  margin-bottom: 4rem;
+  font-family: Pangea Display,Helvetica,Arial,sans-serif;
+  line-height: 1.25;
+  font-weight: 500;
+}
+.destinationbutton{
+  display: inline;
+  border-radius: 9999px;
+    border-width: 1px;
+    border-color: rgb(204 204 204/var(--tw-border-opacity));
+    padding: 0.5rem 1.25rem;
+    font-size: 14px;
+    font-weight: 500;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    margin-bottom: 1rem;
+}
+.box1{
+  justify-content: space-between;
+  align-items: center;
+}

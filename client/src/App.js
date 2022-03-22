@@ -12,13 +12,14 @@ function App() {
   return (
 
     <div className="App">
-
+      {/* <Navbar/> */}
       <BrowserRouter>
         <Routes>
-          {/* <Route exact path="/"><Landing></Landing></Route>
-          <Route exact path="/home"><Home></Home></Route> */}
+          {/* <Route exact path="/"><Landing></Landing></Route> */}
+            {/* <Route exact path="/home"><Home></Home></Route> */}
           {/* <Route path="/" element={<App />} /> */}
           <Route path="/" element={<Landing />} />
+        
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
