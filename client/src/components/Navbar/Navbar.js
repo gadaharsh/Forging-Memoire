@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <header>
         <div className="header">
-          <nav className="navigation">
+          <nav className="navigation"> 
             <Link to="#" className="navbar-logo">
               Logo
             </Link>
