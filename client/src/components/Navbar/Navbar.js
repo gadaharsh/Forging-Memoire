@@ -16,20 +16,25 @@ const logo = require("../../components/Home/Forging.png");
 function Navbar() {
   return (
     <>
-      <header>
-        <div className="header">
-          <nav className="navigation">
-            <a href="#" className="navbar-logo">
-              Logo
-            </a>
-            <div className="navbar-right">
-              <a href="#">About</a>
-              <a href="#">Blog</a>
-              <a href="#">Contact</a>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <div className="header">
+        <nav className="navigation">
+
+          {/* <div className="navbar-brand"> */}
+          <div>
+            <Link to="/home" className="navbar-logo logo-image">
+              <img className="image-fluid" src={logo} alt="brand_logo" />
+            </Link>
+            
+          </div>
+          <div className="navbar-right">
+            <Link to="/home">Destinations</Link>
+            <Link to="/home">Experiences</Link>
+            <Link to="/home">About</Link>
+            <Link to="/home">Login</Link>
+          </div>
+        </nav>
+      </div>
+
       {/* <Nav className= "justify-content-center">
      <Nav.Item >
        <Nav.Link>
