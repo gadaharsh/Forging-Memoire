@@ -1,3 +1,61 @@
+.navigation {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .navbar-brand
+  {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      text-align: center;
+      margin:0 auto;
+      float: center;
+  }
+  
+  .navbar-logo {
+    padding-right: 5%;
+  }
+  
+  .navbar-right {
+    float: right;
+    padding-right: 5%;
+  }
+  
+  .navbar-right a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+  }
+  
+  .navbar-right a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-left {
+    float: left;
+    padding-left: 5%;
+  
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-weight: 900;
+  }
+   
+  .navbar-left a:hover {
+    text-decoration: underline;
+  }
+// Nav {
+//     background: transparent;
+// }
+
 // /*CUSTOM SCROLL BAR*/
 // *,html{
 //   scroll-behavior: smooth;
