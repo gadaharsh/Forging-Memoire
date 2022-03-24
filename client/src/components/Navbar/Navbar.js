@@ -17,12 +17,12 @@ function Navbar() {
   return (
     <>
       <div className="header">
-        <nav className="navigation">
+        <nav className="navigation py-5">
 
           {/* <div className="navbar-brand"> */}
-          <div>
-            <Link to="/home" className="navbar-logo logo-image">
-              <img className="image-fluid" src={logo} alt="brand_logo" />
+          <div className="image-div">
+            <Link to="/home" className="navbar-logo">
+              <img className="image-fluid logo-image"  src={logo} alt="brand_logo" />
             </Link>
             
           </div>
@@ -30,7 +30,7 @@ function Navbar() {
             <Link to="/home">Destinations</Link>
             <Link to="/home">Experiences</Link>
             <Link to="/home">About</Link>
-            <Link to="/home">Login</Link>
+            <Link to="/login">Login</Link>
           </div>
         </nav>
       </div>

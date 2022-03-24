@@ -4,6 +4,14 @@ import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./Home.scss";
 import Navbar from "../Navbar/Navbar";
+import {
+    BrowserRouter,
+    Link,
+    Route,
+    Switch,
+    useHistory,
+    useNavigate,
+  } from "react-router-dom";
 // import * as mdb from 'mdb-ui-kit';
 
 function Home() {
@@ -23,12 +31,12 @@ function Home() {
               <h2 className="whereto text-2xl md:text-4xl font-display leading-tight font-semibold mb-8 lg:mb-16 d-inline">
                 Where to next?
               </h2>
-              <a
-                href="/home"
+              <Link
+                to="/home"
                 className="destinationbutton btn hidden lg:inline mb-4"
               >
                 View all destinations
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@
 //     height: auto;
 //     border-radius: 10%;
 //     overflow: hidden;
-
+    
 // }
 
 nav div,
@@ -30,15 +30,19 @@ nav div Link {
 
 .navbar-logo {
   padding-right: 5%;
-  padding: 0;
+  // padding: 0;
   //   height: 20%;
   //   width: 20%;
   //   max-height: 70px;
   //   max-width: 70px;
   //   object-fit: contain;
-  transform: scale(0.5, 0.5);
-  -ms-transform: scale(0.5, 0.5);
-  -webkit-transform: scale(0.5, 0.5);
+  // transform: scale(0.5, 0.5);
+  // -ms-transform: scale(0.5, 0.5);
+  // -webkit-transform: scale(0.5, 0.5);
+  
+  object-fit: cover;
+width: 100%;
+height: 250px;
 }
 
 .navbar-right {
@@ -71,6 +75,31 @@ nav div Link {
 
 .navbar-left a:hover {
   text-decoration: underline;
+}
+
+.image-div{
+  max-width: 70px;
+  max-height: 70px;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // background-size: contain;
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain;
+
+  height: 20em;
+  width: 20em;
+}
+
+.image-div img{
+  max-width: 200%;
+  max-height: 200%;
+  margin: auto;
+  display: block;
+  padding : 0;
+  
 }
 
 // Nav {
