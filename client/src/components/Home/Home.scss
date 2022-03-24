@@ -138,9 +138,18 @@
   color: rgb(248,248,255);
   border-width: 0.2em;
 }
+
+.destinationbutton:hover{
+ color: #cfecf7;
+}
+
 .box1 {
   justify-content: space-between;
   align-items: center;
+}
+
+.box1 div,a{
+  
 }
 
 .centered{
