@@ -131,17 +131,17 @@ module.exports.registerUser = async (req, res, next) => {
         }
     });
 }
-// module.exports.userDetails = async (req, res, next) => {
-//     console.log(req.body)
-//     const user = await User.findById(req.user.id);
-//     const userData = new UserData(req.body);
-//     userData.author = user.id;
-//     userres = await userData.save();
-//     console.log(userres)
-//     console.log(req.user)
-//     res.send('success')
-//     req.flash('success', 'Details added');
-// }
+module.exports.userDetails = async (req, res, next) => {
+    console.log(req.body)
+    const user = await User.findById(req.user.id);
+    const userData = new UserData(req.body);
+    userData.author = user.id;
+    userres = await userData.save();
+    console.log(userres)
+    console.log(req.user)
+    res.send('success')
+    req.flash('success', 'Details added');
+}
 
 module.exports.loginUser = async (req, res, next) => {
     console.log(req.body)
