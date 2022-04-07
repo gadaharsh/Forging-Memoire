@@ -12,6 +12,7 @@ import {
   useHistory,
   useNavigate,
 } from "react-router-dom";
+import { Button } from "react-bootstrap";
 // import * as mdb from 'mdb-ui-kit';
 
 function Home() {
@@ -50,13 +51,11 @@ function Home() {
                   to="/home"
                   className="destinationbutton btn  lg:inline mb-4"
                 >
-                  View all destinations
+                  <Button className="destinationbutton">View all destinations</Button>
+                  
                 </Link>
               </div>
             </div>
-            {/* <div class="w-100"></div>
-    <div class="col">col</div>
-    <div class="col">col</div> */}
           </div>
         </div>
       </div>
