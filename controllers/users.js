@@ -89,7 +89,7 @@
 // }
 
 const User = require('../models/user')
-// const UserData = require('../models/userdata')
+
 const passportLocal = require('passport-local')
 const passport = require('passport')
 const bcrypt = require("bcryptjs")
@@ -149,7 +149,7 @@ module.exports.loginUser = async (req, res, next) => {
     passport.authenticate("local", (err, user, info) => {
         console.log("USER:",user);
         if (err) throw err;
-        if (!user) res.send("No User Exists");
+        if (!user) throw err;
         else {
             req.logIn(user, (err) => {
                 if (err) throw err;
@@ -165,5 +165,105 @@ module.exports.logoutUser = (req, res) => {
     req.logout();
     req.flash('success', 'You have been logged out')
     res.send('success logout')
-    // res.redirect('/campgrounds')
 }
+
+
+
+
+// const User = require('../models/user')
+// const UserData = require('../models/userdata')
+// const passportLocal = require('passport-local')
+// const passport = require('passport')
+// const bcrypt = require("bcryptjs")
+
+
+// module.exports.registerUser = async (req, res, next) => {
+//     User.findOne({
+//         username: req.body.username
+//     }, async (err, doc) => {
+//         if (err) throw err;
+//         if (doc) res.send("User Already Exists");
+//         if (!doc) {
+//             const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+//             const newUser = new User({
+//                 username: req.body.username,
+//                 password: hashedPassword,
+//                 email: req.body.email,
+//             });
+//             const user = {
+//                 username: req.body.username,
+//                 password: req.body.password,
+//             }
+//             await newUser.save();
+//             console.log("User Created");
+//             passport.authenticate("local", (err, user, info) => {
+//                 if (err) throw err;
+//                 if (!user) res.send("No User Exists");
+//                 else {
+//                     req.logIn(user, (err) => {
+//                         if (err) throw err;
+//                         console.log('req user')
+//                         console.log(req.user);
+//                         res.send("Successfully Authenticated");
+
+//                     });
+//                 }
+//             })(req, res, next);
+//         }
+//     });
+// }
+// module.exports.userDetails = async (req, res, next) => {
+//     console.log(req.body)
+//     const user = await User.findById(req.user.id);
+//     const userData = new UserData(req.body);
+//     userData.author = user.id;
+//     userres = await userData.save();
+//     console.log(userres)
+//     console.log(req.user)
+//     res.send('success')
+//     req.flash('success', 'Details added');
+
+
+// }
+
+// module.exports.loginUser = async (req, res, next) => {
+ 
+//     console.log(req.body)
+//     passport.authenticate("local", (err, user, info) => {
+//         if (err) throw err;
+//         if (!user) res.send("No User Exists");
+//         else {
+//             req.logIn(user, (err) => {
+//                 if (err) throw err;
+//                 console.log('req user')
+//                 console.log(req.user);
+//                 res.send("Successfully Authenticated");
+
+//             });
+//         }
+//     })(req, res, next);
+// }
+// module.exports.logoutUser = (req, res) => {
+//     req.logout();
+//     req.flash('success', 'You have been logged out')
+//     res.send('success logout')
+ 
+// }
+// module.exports.profileDetails = async (req, res) => {
+    
+//     const user = await User.findById(req.user.id);
+   
+//     res.send(user)
+
+
+// }
+// module.exports.profileDetails1 = async (req, res) => {
+    
+//     const user = await User.findById(req.user.id);
+//     const userDetails = await UserData.findOne({ author: req.user.id })
+  
+//     res.send(userDetails)
+   
+
+// }
