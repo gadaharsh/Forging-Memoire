@@ -13,10 +13,11 @@ import {
 import Axios from "axios";
 
 const logo = require("../../components/Home/Forging.png");
+
 function Navbar() {
   return (
     <>
-      <div className="header">
+      <div className="header py-0">
         <nav className="navigation py-5">
 
           {/* <div className="navbar-brand"> */}
@@ -26,7 +27,7 @@ function Navbar() {
             </Link>
             
           </div>
-          <div className="navbar-right">
+          <div className="navbar-right my-5">
             <Link to="/home">Destinations</Link>
             <Link to="/home">Experiences</Link>
             <Link to="/home">About</Link>

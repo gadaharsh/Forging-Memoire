@@ -57,7 +57,12 @@ height: 250px;
   font-family: Arial;
   font-weight: 900;
 }
-
+.py-5{
+  padding-top: 0 !important;
+}
+.navbar-right{
+  padding-top: 0 !important;
+}
 .navbar-right a:hover {
   text-decoration: underline;
 }
@@ -101,6 +106,7 @@ height: 250px;
   padding : 0;
   
 }
+
 
 // Nav {
 //     background: transparent;
