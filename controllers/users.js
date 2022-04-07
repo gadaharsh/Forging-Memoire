@@ -145,7 +145,9 @@ module.exports.userDetails = async (req, res, next) => {
 
 module.exports.loginUser = async (req, res, next) => {
     console.log(req.body)
+    const user = req.body
     passport.authenticate("local", (err, user, info) => {
+        console.log("USER:",user);
         if (err) throw err;
         if (!user) res.send("No User Exists");
         else {
