@@ -23,7 +23,9 @@ function Landing() {
         <div className="content">
           <div class="panel pink">
             <Link to="/home">
-              <button style={{ cursor: "pointer" }}>Get Started</button>
+              <button id="btnLand" style={{ cursor: "pointer" }}>
+                Get Started
+              </button>
             </Link>
           </div>
         </div>

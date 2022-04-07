@@ -5,13 +5,14 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./Home.scss";
 import Navbar from "../Navbar/Navbar";
 import {
-    BrowserRouter,
-    Link,
-    Route,
-    Switch,
-    useHistory,
-    useNavigate,
-  } from "react-router-dom";
+  BrowserRouter,
+  Link,
+  Route,
+  Switch,
+  useHistory,
+  useNavigate,
+} from "react-router-dom";
+import { Button } from "react-bootstrap";
 // import * as mdb from 'mdb-ui-kit';
 
 function Home() {
@@ -24,19 +25,36 @@ function Home() {
           <div className="cold image-hoverable"></div>
           {/* <div className="pnw"></div> */}
           <div className="desert image-hoverable"></div>
-
-          <div className="container pt-5 centered">
-            <p className="plan">Plan Your Trip</p>
-            <div className="box1 d-flex justify-between items-center ">
-              <h2 className="whereto text-2xl md:text-4xl font-display leading-tight font-semibold mb-8 lg:mb-16 d-inline">
-                Where to next?
-              </h2>
-              <Link
-                to="/home"
-                className="destinationbutton btn hidden lg:inline mb-4"
-              >
-                View all destinations
-              </Link>
+          <div className="container pt-2 px-5 d-flex justify-content-center centered">
+            <h1 className="title">Discover story-worthy travel moments</h1>
+          </div>
+        </div>
+        <div
+          className="container pt-5
+         planSection "
+        >
+          <div class="row">
+            <div class="col-9">
+              {" "}
+              <div className="container planChild" id="plantrip">
+                <p className="plan">Plan Your Trip</p>
+                <div className="box1 d-flex justify-between items-center ">
+                  <h2 className="whereto text-2xl md:text-4xl font-display leading-tight font-semibold mb-8 lg:mb-16 d-inline">
+                    Where to next?
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div className="container pt-4 planChild">
+                <Link
+                  to="/home"
+                  className="destinationbutton btn  lg:inline mb-4"
+                >
+                  <Button className="destinationbutton">View all destinations</Button>
+                  
+                </Link>
+              </div>
             </div>
           </div>
         </div>

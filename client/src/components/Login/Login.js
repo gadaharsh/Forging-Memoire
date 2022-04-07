@@ -22,7 +22,7 @@ function Login(){
             withCredentials: true,
             url: "http://localhost:3001/login",
             }).then((data) => {
-            navigate("/")
+            navigate("/home")
             console.log(data)
         })
             .catch((error) => {
@@ -37,7 +37,7 @@ function Login(){
         <>
         <div className="loginpage">
         <Form onSubmit={submit}>
-          <div class="title">Login</div>
+          <div className="title">Login</div>
           <input type="text" placeholder="Username" value={username} onChange={(event)=> setUsername(event.target.value)} className="user-input"/>
           <input type="password" placeholder="Password" value={password} onChange={(event)=> setPassword(event.target.value)} className="user-input"/>
           <button type="submit" className="submit-button">Login</button>
