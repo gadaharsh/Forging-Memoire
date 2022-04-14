@@ -136,14 +136,19 @@
   transition-duration: 0.15s !important;
   margin-bottom: 1rem !important;
   // color: rgb(248,248,255);
+  background-color: white !important;
   color: black !important;
   color: rgb(75 75 75 / var(--tw-text-opacity)) !important;
   border-width: 0.2em !important;
+  z-index: 600;
 }
 
 .destinationbutton:hover {
   background-color: #36c !important;
-  color: red !important;
+  color: white !important;
+  border-radius: 9999px !important;
+  border-width: 1px !important;
+  border-color: rgb(204 204 204 / var(--tw-border-opacity)) !important;
 }
 
 .box1 {
@@ -171,8 +176,11 @@
   font-weight: 500;
   font-size: 75px !important;
   text-align: center;
+  height: max-content;
 }
-
+#titlecont{
+height: max-content;
+}
 // .planSection{
 //   margin-right: 0 !important;
 // }
@@ -184,3 +192,17 @@
 //   display: inline-flex;
 //   flex-direction: row !important;
 // }
+.wheretocard{
+  border:0;
+}
+.wheretocardimg{
+  border-radius: 10px;
+}
+.websitebanner{
+  background: url("https://images.unsplash.com/photo-1616908841648-a4bc4322d64e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  height:200px;
+
+}

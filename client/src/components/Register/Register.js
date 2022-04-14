@@ -44,7 +44,7 @@ function Register(){
           <input type="text" placeholder="Username" value={username} onChange={event=> setUsername(event.target.value)} className="user-input"/>
           <input type="password" placeholder="Password" value={password} onChange={event=> setPassword(event.target.value)} className="user-input"/>
           <button type="submit" className="submit-button">Register</button>
-          <a className="pt-5 login" href="/login">Already have an account?Login Here!</a>
+          <a className="pt-5 login m-0" href="/login">Already have an account?Login Here!</a>
         </Form>
         </div>
         </>
