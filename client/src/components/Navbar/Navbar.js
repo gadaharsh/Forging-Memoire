@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <>
       <div className="header py-0">
-        <nav className="navigation py-5">
+        <nav className="navigation py-3">
 
           {/* <div className="navbar-brand"> */}
           <div className= "image-div">

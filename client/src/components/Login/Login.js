@@ -49,7 +49,7 @@ function Login(){
           <input type="text" placeholder="Username" value={username} onChange={(event)=> setUsername(event.target.value)} className="user-input"/>
           <input type="password" placeholder="Password" value={password} onChange={(event)=> setPassword(event.target.value)} className="user-input"/>
           <button type="submit" className="submit-button">Login</button>
-          <a className="pt-5 register" href="/register">New Here?Register with us!</a>
+          <a className="pt-5 register m-0" href="/register">New Here?Register with us!</a>
         </Form>
         </div>
         </>
