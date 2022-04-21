@@ -17,7 +17,9 @@ import LocationCard from "../LocationCard/LocationCard";
 import Footer from "../Footer/Footer";
 // import * as mdb from 'mdb-ui-kit';
 
-const imageLocation="https://images.unsplash.com/photo-1547994770-e5d8509b114d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+const imageLocation1="https://images.unsplash.com/photo-1601961405399-801fb1f34581?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+const imageLocation2="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+const imageLocation3="https://images.unsplash.com/photo-1589041127168-9b1915731dc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
 
 function Home() {
   return (
@@ -59,9 +61,9 @@ function Home() {
             </div>
           </div>
           <div class="row container">
-            <LocationCard image={imageLocation} location="Mumbai"/>
-            <LocationCard image={imageLocation} location="Kashmir"/>
-            <LocationCard image={imageLocation} location="Chennai"/>
+            <LocationCard image={imageLocation1} location="Mumbai"/>
+            <LocationCard image={imageLocation2} location="Kashmir"/>
+            <LocationCard image={imageLocation3} location="Kolkata"/>
           </div>
         </div>
         <Footer/>
