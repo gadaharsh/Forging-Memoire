@@ -4,6 +4,8 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Input from '@mui/material/Input';
 
 const style = {
   position: "absolute",
@@ -11,9 +13,8 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "40%",
-  bgcolor: 'white',
-  outline: 'none'
-
+  bgcolor: "white",
+  outline: "none",
 };
 
 const SearchModal = (props) => {
@@ -22,17 +23,16 @@ const SearchModal = (props) => {
       open={props.openSearch}
       onClose={props.handleClose}
       onBackdropClick={props.handleClose}
-      
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
     >
       <Box sx={style}>
-        <Typography id="transition-modal-title" variant="h6" component="h2">
-          Search Modal
-        </Typography>
-        <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-          Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </Typography>
+        <Grid container spacing={1}>
+        <Input placeholder="Where would you like to go ?"  />
+          <Typography id="transition-modal-description" >
+            Much to do
+          </Typography>
+        </Grid>
       </Box>
     </Modal>
   );

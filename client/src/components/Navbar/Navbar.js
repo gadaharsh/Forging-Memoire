@@ -13,7 +13,7 @@ import {
 import Axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
 import SearchModal from "../SearchModal/SearchModal";
-import Modal from "@mui/material/Modal";
+
 
 const logo = require("../../components/Home/Forging.png");
 
