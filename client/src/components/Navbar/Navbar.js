@@ -11,12 +11,20 @@ import {
   useNavigate,
 } from "react-router-dom";
 import Axios from "axios";
-import SearchIcon from '@mui/icons-material/Search';
-import Typography from '@mui/material/Typography';
+import SearchIcon from "@mui/icons-material/Search";
+import SearchModal from "../SearchModal/SearchModal";
+import Modal from "@mui/material/Modal";
 
 const logo = require("../../components/Home/Forging.png");
 
 function Navbar() {
+  const [openSearch, setOpenSearch] = useState(false);
+  const handleOpen = () => {
+    setOpenSearch(true);
+    console.log("clicked");
+  };
+  const handleClose = () => setOpenSearch(false);
+
   return (
     <>
       <div className="header py-0">
@@ -46,9 +54,14 @@ function Navbar() {
                 <Link to="/login">Login</Link>
               </li>
             </ul> */}
+            <>
+              <button onClick={handleOpen} className="searchBtn">
+                <SearchIcon style={{ color: "white" }} />
+                Search
+              </button>
+              <SearchModal handleClose={handleClose} openSearch={openSearch} />
+            </>
 
-            <button className="searchBtn"><SearchIcon style={{ color: "white" }}/>Search</button>
-            
             <Link to="/home">Destinations</Link>
             <Link to="/home">Experiences</Link>
             <Link to="/home">About</Link>
