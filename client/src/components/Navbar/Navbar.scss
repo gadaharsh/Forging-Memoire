@@ -47,7 +47,8 @@ height: 250px;
 
 .navbar-right {
   float: right;
-  padding-right: 5%;
+  padding-right: 2.5%;
+  margin-right: 2.5%;
 }
 
 .navbar-right a {
@@ -106,4 +107,24 @@ height: 250px;
   padding : 0;
   // padding-left: 2em;
   margin-left: 1em;
+}
+
+
+.list{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.searchBtn{
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+  font-family: Arial;
+  font-weight: 900;
+}
+
+.searchBtn:hover {
+  text-decoration: underline;
 }
