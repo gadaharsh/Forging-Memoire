@@ -1,0 +1,23 @@
+.websitebanner {
+  /* background: url("https://images.unsplash.com/photo-1616908841648-a4bc4322d64e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"); */
+  /* background-repeat: no-repeat; */
+  background-color: black;
+  background-size: cover;
+  color: white;
+  height: 10%;
+  padding-top: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.follow {
+    /* align-items: center; */
+    justify-content: center;
+    display:inline-flex;
+}
+
+.social{
+    padding: 10px 0 10px 10px;
+}
