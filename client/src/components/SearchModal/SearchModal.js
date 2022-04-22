@@ -22,8 +22,9 @@ const LocationText = (props) => {
 };
 
 const style = {
+  marginTop: "20%",
   position: "absolute",
-  top: "20%",
+//   top: "20%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "40%",
@@ -32,38 +33,44 @@ const style = {
   outline: "none",
 };
 
-const SearchModal = (props) => {
-  const dataNoQuery = [
-    {
-      slno: 0,
-      abb: "AN",
-      name: "Andaman and Nicobar Islands",
-      state: "andaman-and-nicobar",
-    },
-    {
-      slno: 1,
-      abb: "AP",
-      name: "Andhra Pradesh",
-      state: "andhra-pradesh",
-    },
-    {
-      slno: 2,
-      abb: "AR",
-      name: "Arunachal Pradesh",
-      state: "arunachal-pradesh",
-    },
-  ];
+const dataNoQuery = [
+  {
+    slno: 0,
+    abb: "AN",
+    name: "Andaman and Nicobar Islands",
+    state: "andaman-and-nicobar",
+  },
+  {
+    slno: 1,
+    abb: "AP",
+    name: "Andhra Pradesh",
+    state: "andhra-pradesh",
+  },
+  {
+    slno: 2,
+    abb: "AR",
+    name: "Arunachal Pradesh",
+    state: "arunachal-pradesh",
+  },
+];
 
+const SearchModal = (props) => {
   const getFilteredItems = (query, data) => {
     if (!query) {
-      return dataNoQuery.map((value) => <LocationText state={value.name} />);
+      return dataNoQuery.map((value) => value);
     }
-    return data.filter((data) => data.name.includes(query));
+    return data.filter((data) =>
+      data.name.toLowerCase().includes(query.toLowerCase())
+    );
   };
 
   const [query, setQuery] = useState("");
 
   const filterItems = getFilteredItems(query, data);
+
+  useEffect(() => {
+    setQuery("");
+  }, [props.openSearch]);
 
   return (
     <Modal
@@ -78,7 +85,7 @@ const SearchModal = (props) => {
           <Grid item xs={10}>
             <Input
               item
-              style ={{width: '100%'}}
+              style={{ width: "100%" }}
               placeholder="Where would you like to go ?"
               onChange={(e) => setQuery(e.target.value)}
             />
@@ -90,12 +97,11 @@ const SearchModal = (props) => {
             </button>
           </Grid>
 
-          {/* <ul>
-    {filterItems.map((value)=>
-    <h6 key={value.id} >{value.name}</h6>
-    )}
-</ul> */}
-          <LocationText state="Mumbai" />
+          {filterItems.map((value) => (
+            <Grid item xs={6}>
+              <LocationText key={value.id} state={value.name} />
+            </Grid>
+          ))}
         </Grid>
       </Box>
     </Modal>
