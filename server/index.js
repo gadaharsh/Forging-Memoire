@@ -23,6 +23,7 @@ const {
  
 //imports files
 const usersRoutes = require('../routes/users');
+const tourismRoutes = require('../routes/tourism');
 const User = require('../models/user');
 
 //port setup and app initialize
@@ -89,6 +90,7 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/', usersRoutes);
+app.use('/blogs', tourismRoutes);
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page not found", 404));

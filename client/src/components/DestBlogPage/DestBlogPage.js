@@ -12,35 +12,24 @@ function DestBlogPage(){
     const [password,setPassword]=useState('')
     const [error, setError] = useState("");
 
-    const submit=(e)=>{
-        
-        e.preventDefault();
-        Axios({
-            method: "POST",
-            data: {
-                username: username,
-                password: password,
-            },
-            withCredentials: true,
-            url: "http://localhost:3001/login",
-            }).then((data) => {
-                if(data.data=="Successfully Authenticated"){
-            navigate("/home")
-            console.log(data)
-        }else{
-            setError("Incorrect username or password");
-            setTimeout(() => {
-                setError("")
-            }, 5000)
-        }
-        })
-            .catch((error) => {
-                setError("Incorrect username or password");
-                setTimeout(() => {
-                    setError("")
-                }, 5000)
-            });
-    }
+    // useEffect(() => {
+    //     Axios({
+    //         method: "GET",
+    //         withCredentials: true,
+    //         url: "http://localhost:3001/",
+    //     }).then((data) => {
+    //         // console.log(data);
+    //         // history.push("/");
+    //         setUser(data.data);
+    //         console.log("user")
+    //         // console.log(data.data)
+    //         // console.log(user)
+    //         // setUserDetails(data.data.userDetails);
+    //     })
+    //         .catch((error) => {
+    //             console.error(error.response);
+    //         });
+    // }, [])
 
     return(
         <>

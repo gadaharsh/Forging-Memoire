@@ -43,8 +43,18 @@
 // }
 const fs = require('fs'); 
 const { parse } = require('csv-parse');
-var parser = parse({columns: true}, function (err, records) {
-	console.log(records);
-});
 
-fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/tourism_.csv').pipe(parser);
+module.exports.blogInfo = async (req, res, next) => {
+
+    var parser = parse({columns: true}, function (err, records) {
+    
+        console.log(records)
+        res.send(records)
+        // return(records)
+     
+       
+    });
+    fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/tourism_.csv').pipe(parser);
+}
+// let blogs={};
+
