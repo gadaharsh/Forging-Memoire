@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 import DestBlogPage from './components/DestBlogPage/DestBlogPage'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import DestPage from './components/DestPage/DestPage';
 function App() {
   return (
 
@@ -24,7 +25,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/blogs" element={<DestPage/>} />
           <Route path="/destpage" element={<DestBlogPage/>} />
+   
         </Routes>
       </BrowserRouter>
 
