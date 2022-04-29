@@ -29,44 +29,36 @@ const DestPage = () => {
     }, [])
     const blogdetails = blogs.map((blog, id) => {
         return <div key={id}>
-            <div className="blogdetails card mb-4 mx-4 d-flex">
+            <div className="container justify-content-center">
+            <div className="blogdetails card mb-4 m-4 p-3 d-flex">
                 <div className="row">
                     <div className="col-md-4">
                         <img src={blog.image} width="50px" height="50px"></img>
                     </div>
                     <div className="col-md-8">
-                        <h5>State:</h5><p>{blog.state_name}</p><h5>Link:</h5><p>{blog.main_article_link}</p>
-                        {/* <h5>Posted By:<span className="text-muted">{blog.author}</span></h5> */}
+                        <h5>State:</h5><p>{blog.state_name}</p>
                     </div>
-
-
-                    {/* <div className="col-md-8">
-                <h5 className="card-title">
-                    <%=camp.title%>
-                </h5>
-                <p className="card-text">
-                    <%=camp.description%>
-                </p>
-                <p className="card-text">
-                    <small className="text-muted">
-                        <%=camp.location%>
-                    </small>
-                </p>
-                <a href="/campgrounds/<%= camp._id %>" className="btn btn-primary">show details</a>
-            </div> */}
                 </div>
-                {/* <div className="row">
-                    <div className="col-md-12">
-                    </div>
-                </div> */}
                 <div className="row">
-                    <div className="col">
+                    <div  className="col-4">
+
+                    </div>
+                    <div className="col-8">
                         <div>
-                            <a href={'/blogs/' + blog._id} className="btn btn-primary">show details</a>
+                        <div className="container pt-4 planChild">
+                {/* <Link
+                  to="/home"
+                  className="destinationbutton btn  lg:inline mb-4"
+                > */}
+                  {/* <a href=className="destinationbutton" ><Button ></Button></a> */}
+                  <Button  href={'/blogs/' + blog._id}  className="destinationbutton btn">show details</Button>
+                {/* </Link> */}
+              </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     })
     return (
