@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-
+import Fuse from 'fuse.js';
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
@@ -67,6 +67,12 @@ const dataNoQuery = [
 
 const SearchModal = (props) => {
   const getFilteredItems = (query, data) => {
+    const fuse = new Fuse(characters, {
+      keys: [
+        'name',
+      ]
+    });
+    const results = fuse.search('bender');
     if (!query) {
       return dataNoQuery.map((value) => value);
     }
