@@ -67,12 +67,12 @@ const dataNoQuery = [
 
 const SearchModal = (props) => {
   const getFilteredItems = (query, data) => {
-    const fuse = new Fuse(characters, {
-      keys: [
-        'name',
-      ]
-    });
-    const results = fuse.search('bender');
+    // const fuse = new Fuse(characters, {
+    //   keys: [
+    //     'name',
+    //   ]
+    // });
+    // const results = fuse.search('bender');
     if (!query) {
       return dataNoQuery.map((value) => value);
     }

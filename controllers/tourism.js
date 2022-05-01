@@ -1,6 +1,8 @@
 const fs = require('fs'); 
 const { parse } = require('csv-parse');
-const Locations = require('../models/tourism')
+const Location = require('../models/tourism')
+const User = require('../models/user')
+
 // module.exports.blogInfo = async (req, res, next) => {
 
 //     var parser = parse({columns: true}, function (err, records) {
@@ -22,8 +24,20 @@ const Locations = require('../models/tourism')
 //         fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/yatra.csv').pipe(parser);
 // }
 
-module.exports.show = async (req, res, next) => {
-    
+module.exports.find = async (req, res, next) => {
+    // let json = require('D:/Projects/Forging_Memoire/controllers'+'/yatra.json');
+    // res.send(json);
+    Location.find((err, data) => {
+        if (!err) {
+            res.send(data)
+        } else {
+            console.log('Failed to retrieve the Course List: ' + err);
+        }
+    });
 }
-
+module.exports.show=async(req,res,next)=>{
+    const location = await Location.findById(req.params.id);
+    // console.log(location)
+    res.send(location)
+}
 

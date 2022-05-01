@@ -53,8 +53,8 @@ const locationSchema = new mongoose.Schema({
         type:[String]
     },
 });
-const Locations = mongoose.model('Locations', locationSchema);
-module.exports = Locations;
+// const Location = mongoose.model('Locations', locationSchema);
+module.exports = mongoose.model('Locations', locationSchema);
 // const temp=async (req, res, next) => {
 //     let json = require('D:/Projects/Forging_Memoire/controllers'+'/yatra.json');
 //     console.log(json, 'the json obj');
