@@ -26,7 +26,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
           <Route path="/blogs" element={<DestPage/>} />
-          <Route path="/destpage" element={<DestBlogPage/>} />
+          <Route path="/blogs/:id" element={<DestBlogPage/>} />
    
         </Routes>
       </BrowserRouter>

@@ -3,7 +3,8 @@ const catchAsync = require('../utils/catchAsync')
 const router = express.Router();
 
 const {
-   blogInfo
+   find,
+   show
     // logoutUser,
     // userDetails,
     // profileDetails,
@@ -11,5 +12,7 @@ const {
 } = require('../controllers/tourism')
 
 router.route('/find')
-    .get(catchAsync(blogInfo))
+    .get(find)
+router.route('/:id')
+    .get(show)
 module.exports = router;

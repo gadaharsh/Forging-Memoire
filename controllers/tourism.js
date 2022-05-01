@@ -1,38 +1,43 @@
 const fs = require('fs'); 
 const { parse } = require('csv-parse');
+const Location = require('../models/tourism')
+const User = require('../models/user')
 
-module.exports.blogInfo = async (req, res, next) => {
+// module.exports.blogInfo = async (req, res, next) => {
 
-    var parser = parse({columns: true}, function (err, records) {
+//     var parser = parse({columns: true}, function (err, records) {
     
-        // console.log(records)
-        // res.send(records)
-    //  console.log()
-    //  const data =JSON.stringify(records)
-    //  fs.writeFile('tourism.json', data, (err) => {
-    //     if (err) {
-    //         throw err;
-    //     }
-    //     console.log("JSON data is saved.");
-    // });
-       
-     
-       
+//             console.log(records)
+//             res.send(records)
+//          console.log()
+//          const data =JSON.stringify(records)
+//          fs.writeFile('yatra.json', data, (err) => {
+//             if (err) {
+//                 throw err;
+//             }
+//             console.log("JSON data is saved.");
+//         });
+           
+         
+           
+//         });
+//         fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/yatra.csv').pipe(parser);
+// }
+
+module.exports.find = async (req, res, next) => {
+    // let json = require('D:/Projects/Forging_Memoire/controllers'+'/yatra.json');
+    // res.send(json);
+    Location.find((err, data) => {
+        if (!err) {
+            res.send(data)
+        } else {
+            console.log('Failed to retrieve the Course List: ' + err);
+        }
     });
-    fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/tourism_.csv').pipe(parser);
 }
-
-module.exports.show = async (req, res, next) => {
-
-    var parser = parse({columns: true}, function (err, records) {
-    
-        console.log(records)
-        res.send(records)
-   
-     
-       
-    });
-    fs.createReadStream('D:/Projects/Forging_Memoire/controllers'+'/tourism_.csv').pipe(parser);
+module.exports.show=async(req,res,next)=>{
+    const location = await Location.findById(req.params.id);
+    // console.log(location)
+    res.send(location)
 }
-
 

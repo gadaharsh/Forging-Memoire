@@ -54,7 +54,7 @@ function Home() {
                   to="/home"
                   className="destinationbutton btn  lg:inline mb-4"
                 > */}
-                  <Button className="destinationbutton">View all destinations</Button>
+                  <Button href="/blogs" className="destinationbutton">View all destinations</Button>
                   
                 {/* </Link> */}
               </div>

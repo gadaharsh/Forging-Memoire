@@ -33,10 +33,10 @@ const DestPage = () => {
             <div className="blogdetails card mb-4 m-4 p-3 d-flex">
                 <div className="row">
                     <div className="col-md-4">
-                        <img src={blog.image} width="50px" height="50px"></img>
+                        <img src="https://images.unsplash.com/photo-1548276145-69a9521f0499?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1177&q=80" width="50px" height="50px"></img>
                     </div>
                     <div className="col-md-8">
-                        <h5>State:</h5><p>{blog.state_name}</p>
+                        <h5>State:</h5><p>{blog.statenames}</p>
                     </div>
                 </div>
                 <div className="row">
