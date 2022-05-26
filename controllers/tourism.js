@@ -1,7 +1,8 @@
 const fs = require('fs'); 
 const { parse } = require('csv-parse');
 const Location = require('../models/tourism')
-const User = require('../models/user')
+const User = require('../models/user');
+const { builtinModules } = require('module');
 
 // module.exports.blogInfo = async (req, res, next) => {
 
@@ -40,4 +41,14 @@ module.exports.show=async(req,res,next)=>{
     // console.log(location)
     res.send(location)
 }
+module.exports.coordinates=async(req,res,next)=>{
+    let json = require('D:/Projects/Forging_Memoire/controllers'+'/coordinates.json');
+    // if(json.state==req.state){
+    
+    // }
+    res.send(json);
+    // console.log(location)
+    // res.send(location)
+}
+
 
