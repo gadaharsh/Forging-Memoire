@@ -4,7 +4,8 @@ const router = express.Router();
 
 const {
    find,
-   show
+   show,
+   coordinates
     // logoutUser,
     // userDetails,
     // profileDetails,
@@ -15,4 +16,6 @@ router.route('/find')
     .get(find)
 router.route('/:id')
     .get(show)
+router.route('/coordinates')
+    .get(coordinates)
 module.exports = router;

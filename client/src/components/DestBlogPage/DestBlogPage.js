@@ -4,13 +4,27 @@ import { Form, Alert, FormInput } from 'react-bootstrap';
 import Axios from 'axios'
 import { useNavigate,useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import Map, {Marker} from 'react-map-gl';
 
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function DestBlogPage(){
     let navigate = useNavigate();
     const [location, setLocation] = useState({});
+    const [coordinates,setCoordinates] = useState({});
     const [error, setError] = useState("");
     let { id } = useParams()
+    // const [viewport, setViewport]= useState({
+    //     latitude:30,
+    //     longitude:-120,
+    //     zoom:8,
+    //     width: 400,
+    //     height: 400,
+    //     width:window.innerWidth,
+    //     height:window.innerHeight,
+        
+        
+    // });
 
     useEffect(() => {
         Axios({
@@ -25,12 +39,31 @@ function DestBlogPage(){
         })
             // .then(data => this.setState({ postId: data.id }))
             .catch((error) => {
-                setError("No Rides found");
+                setError("No Locations found");
                 setTimeout(() => {
                     setError("")
                 }, 5000)
             });
     }, [])
+    useEffect(()=>{
+        Axios({
+            method: "GET",
+            withCredentials: true,
+            url: 'http://localhost:3001/blogs/coordinates',
+        }).then((data) => {
+            // history.push("/")
+            setCoordinates(data.data);
+            console.log(data.data)
+            console.log("location", coordinates)
+        })
+            // .then(data => this.setState({ postId: data.id }))
+            .catch((error) => {
+                setError("No Locations found");
+                setTimeout(() => {
+                    setError("")
+                }, 5000)
+            });
+    },[])
     return(
         <>
           <Navbar />
@@ -48,7 +81,21 @@ function DestBlogPage(){
             <h2 className='info-subheading'><span style={{fontWeight:'200'}}>Capital:</span><span style={{fontWeight:'500',color:'rgb(75, 75, 214)'}}>{location.cap}</span></h2>
             <p className='mt-3 info-para'>{location.statetourism}</p>
         </div>
+        <div className="container">
+        <Map
+         initialViewState={{
+        longitude: -122.4,
+        latitude: 37.8,
+        zoom: 14
+        }}
+         style={{width: 600, height: 400}}
+         mapStyle="mapbox://styles/mapbox/streets-v9"
+         mapboxAccessToken={'pk.eyJ1IjoibWluaXByb2plY3RtaGEiLCJhIjoiY2wzbmR1NGF4MDNmcTNqcWRwYzg2aHo5aSJ9.bDU-fsoy9g3x9rm7n4RafA'}>
+        <Marker longitude={-122.4} latitude={37.8} color="red" />
+        </Map>
         </div>
+        </div>
+        {/* </div> */}
         {/* <script>
             document.getElementById('the_body').style.backgroundImage = "something.gif"
         </script> */}
