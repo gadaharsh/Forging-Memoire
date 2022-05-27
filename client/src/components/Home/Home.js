@@ -26,6 +26,7 @@ function Home() {
     <>
       <Navbar />
       <div className="Home">
+        
         <div className="flex-container">
           <div className="tropical image-hoverable"></div>
           <div className="cold image-hoverable"></div>
@@ -35,6 +36,7 @@ function Home() {
             <h1 className="title">Discover story-worthy travel moments</h1>
           </div>
         </div>
+        
         <div className="container pt-5 planSection ">
           <div class="row">
             <div class="col-9">

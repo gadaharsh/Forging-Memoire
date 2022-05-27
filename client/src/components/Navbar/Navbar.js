@@ -62,9 +62,9 @@ function Navbar() {
               <SearchModal handleClose={handleClose} openSearch={openSearch} />
             </>
 
-            <Link to="/home">Destinations</Link>
+            <Link to="/blogs">Destinations</Link>
             <Link to="/home">Experiences</Link>
-            <Link to="/home">About</Link>
+            <Link to="/about">About</Link>
             <Link to="/login">Login</Link>
           </div>
         </nav>

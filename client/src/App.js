@@ -10,6 +10,7 @@ import DestBlogPage from './components/DestBlogPage/DestBlogPage'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DestPage from './components/DestPage/DestPage';
+import About from './components/About/About';
 function App() {
   return (
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/blogs" element={<DestPage/>} />
           <Route path="/blogs/:id" element={<DestBlogPage/>} />
+          <Route path="/about" element={<About/>} />
    
         </Routes>
       </BrowserRouter>
