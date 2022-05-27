@@ -43,7 +43,7 @@
   }
 
   .dest {
-    background-color: black;
+    background-color: #c1daff;
     
   }
   .destItem {
@@ -51,6 +51,18 @@
     flex-wrap: wrap;
   }
   
-  .destItem > div{
+  .destItem > div {
     flex: 50%;
+  }
+  
+  // .destItem > div > div{
+  //   flex: 50%;
+  // }
+
+  .stateName{
+    display:inline-flex;
+  }
+
+  .state{
+    font-size: 20px;
   }
