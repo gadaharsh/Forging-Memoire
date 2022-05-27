@@ -1,7 +1,32 @@
-.back{
-    background-color: #0057D9;
+.back {
+  background-color: #81aef1;
 }
-.about{
-    flex: center;
-    padding: 10%;
- }
+.about {
+  justify-content: center;
+  padding: 10% 10% 0 10%;
+  font-size: 20px;
+  
+  width: 60%;
+}
+
+.about > div {
+  margin-top: 5%;
+
+}
+
+.wheretocard {
+  border: 0;
+  padding: 1% ;
+  margin: 2%;
+  /* margin-left: 10%; */
+  background-color: #c1daff;
+  width: 300px;
+  
+}
+
+
+.aboutCard{
+    display:inline-flex;
+    justify-content: center;
+    /* width: 80%; */
+}

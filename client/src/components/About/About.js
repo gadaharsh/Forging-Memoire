@@ -1,11 +1,14 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import "./About.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function About() {
   return (
     <div className="back">
-    <Navbar/>
+      <Navbar />
       <div className="container about">
         <div>
           <p>
@@ -30,7 +33,33 @@ function About() {
           </p>
         </div>
       </div>
-      <Footer/>
+      <div className="container aboutCard">
+        <div class="card wheretocard" style={{ marginLeft: "20%" }}>
+          <p>
+            We know travel has a social, economic and environmental
+            consequences. We must equip travelers with the knowledge to make
+            informed choices about their impact, and inspire them to travel with
+            generosity.
+          </p>
+        </div>
+
+        <div class="card wheretocard" >
+          <p>
+            We believe travel is ultimately about joy and delight. And the
+            planning process should be that too.
+          </p>
+        </div>
+
+        <div class="card wheretocard" >
+          <p>
+            We pursue a vision of the world in which all are welcome. We believe
+            travel can help foster the connection and understanding that makes
+            meaningful moments possible.
+          </p>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
