@@ -5,6 +5,7 @@ import Axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Map, { Marker } from "react-map-gl";
+import Data from "./coordinates.json";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -24,6 +25,10 @@ function DestBlogPage() {
   //     height:window.innerHeight,
 
   // });
+
+  const getCoordinates = () =>{
+    
+  }
 
   useEffect(() => {
     Axios({
@@ -147,12 +152,26 @@ function DestBlogPage() {
           </h1>
           <p className="py-2 info-intro">{location.ataglimse}</p>
           <h2 className="info-subheading">
-            <span style={{ fontWeight: "200" }}>Capital:</span>
+            <span style={{ fontWeight: "200" }}><strong>Capital: </strong></span>
             <span style={{ fontWeight: "500", color: "rgb(75, 75, 214)" }}>
               {location.cap}
             </span>
           </h2>
           <p className="mt-3 info-para">{location.statetourism}</p>
+
+          <p className="mt-3 info-para">{location.gettingaround}</p>
+
+          <p className="mt-3 info-para"><strong>How to reach:</strong> {location.howtoreach}</p>
+
+          <p className="mt-3 info-para"><strong>Tourist Attractions:</strong> {location.touristatt}</p>
+
+          <p className="mt-3 info-para"><strong>Best Time to Visit:</strong> {location.besttime}</p>
+
+          
+
+          <p className="mt-3 info-para"><strong>Regions: </strong>{location.reg}</p>
+
+
         </div>
         <div className="container">
           <Map
