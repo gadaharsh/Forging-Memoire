@@ -1,0 +1,20 @@
+.backE {
+  background-color: #81aef1;
+}
+.aboutE {
+  justify-content: center;
+  padding: 10% 10% 0 10%;
+  font-size: 20px;
+
+  width: 60%;
+}
+
+.aboutE > div {
+  margin-top: 5%;
+}
+
+
+.soon{
+    text-align: center;
+    font-size: 20px;
+}

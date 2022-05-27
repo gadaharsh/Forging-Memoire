@@ -55,7 +55,7 @@ function DestBlogPage() {
         // history.push("/")
         setCoordinates(data.data);
         console.log(data.data);
-        console.log("location", coordinates);
+        console.log("coordinates", coordinates);
       })
       // .then(data => this.setState({ postId: data.id }))
       .catch((error) => {

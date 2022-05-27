@@ -41,14 +41,18 @@ module.exports.show=async(req,res,next)=>{
     // console.log(location)
     res.send(location)
 }
-module.exports.coordinates=async(req,res,next)=>{
+module.exports.coordinates= (req,res,next)=> {
     let json = require('D:/Projects/Forging_Memoire/controllers'+'/coordinates.json');
     // if(json.state==req.state){
     
     // }
+    console.log(json);
     res.send(json);
+    
     // console.log(location)
     // res.send(location)
 }
+
+
 
 

@@ -63,7 +63,7 @@ function Navbar() {
             </>
 
             <Link to="/blogs">Destinations</Link>
-            <Link to="/home">Experiences</Link>
+            <Link to="/experiences">Experiences</Link>
             <Link to="/about">About</Link>
             <Link to="/login">Login</Link>
           </div>

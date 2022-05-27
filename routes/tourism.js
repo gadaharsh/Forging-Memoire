@@ -14,8 +14,8 @@ const {
 
 router.route('/find')
     .get(find)
-router.route('/:id')
-    .get(show)
 router.route('/coordinates')
     .get(coordinates)
+router.route('/:id')
+    .get(show)
 module.exports = router;
