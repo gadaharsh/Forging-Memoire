@@ -2,7 +2,6 @@ import { Container, TextField, Button } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 import { Form, Alert } from "react-bootstrap";
 import "./DestPage.scss";
-import "./DestPage.css";
 
 // import { BrowserRouter, Link, Route, Switch, useHistory } from "react-router-dom";
 import Axios from "axios";
@@ -44,9 +43,9 @@ const DestPage = () => {
                   height="50px"
                 ></img>
               </div>
-              <div className="col-md-8">
-                <h5>State:</h5>
-                <p>{blog.statenames}</p>
+              <div className="stateName col-md-8">
+                <p>State: </p>
+                <h5 className="state"> {blog.statenames}</h5>
               </div>
             </div>
             <div className="row">
@@ -76,11 +75,13 @@ const DestPage = () => {
     );
   });
   return (
-      
+    <>
+      <div className="dest">
         <div className="container destItem">
-            {blogdetails}
+          <div>{blogdetails}</div>
         </div>
-     
+      </div>
+    </>
   );
 };
 export default DestPage;
