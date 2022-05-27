@@ -24,6 +24,7 @@
     "body-parser": "^1.19.2",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
+    "convert-excel-to-json": "^1.7.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "csv-parse": "^5.0.4",
@@ -39,6 +40,7 @@
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "selenium": "^2.20.0"
+    "selenium": "^2.20.0",
+    "xlsx": "^0.18.5"
   }
 }
