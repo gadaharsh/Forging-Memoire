@@ -78,7 +78,7 @@ const DestPage = () => {
     <>
       <div className="dest">
         <div className="container destItem">
-          <div>{blogdetails}</div>
+          {blogdetails}
         </div>
       </div>
     </>
