@@ -2,7 +2,7 @@
 {
     flex-direction: column !important;
     text-align: start;
-    width:90%;
+    width:100%;
     border-radius: 0.2em;
     // height: 15em;
 }
@@ -40,4 +40,17 @@
     border-radius: 9999px !important;
     border-width: 1px !important;
     border-color: rgb(204 204 204 / var(--tw-border-opacity)) !important;
+  }
+
+  .dest {
+    background-color: black;
+    
+  }
+  .destItem {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .destItem > div{
+    flex: 50%;
   }
