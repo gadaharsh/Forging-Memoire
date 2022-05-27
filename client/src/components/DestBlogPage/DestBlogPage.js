@@ -14,6 +14,9 @@ function DestBlogPage() {
   const [location, setLocation] = useState({});
   const [coordinates, setCoordinates] = useState({});
   const [error, setError] = useState("");
+  const[latitude,setLatitude] = useState("");
+  const[longitude,setLongitude] = useState("");
+
   let { id } = useParams();
   // const [viewport, setViewport]= useState({
   //     latitude:30,
@@ -27,7 +30,14 @@ function DestBlogPage() {
   // });
 
   const getCoordinates = () =>{
-    
+    Data.forEach(function(item){
+      if(item.state == location.statenames){
+         
+        setLatitude(item.latitude);
+        setLongitude(item.longitude);
+
+      }
+    })
   }
 
   useEffect(() => {
@@ -70,6 +80,13 @@ function DestBlogPage() {
         }, 5000);
       });
   }, []);
+
+  // useEffect(() => {
+  //   getCoordinates()
+  //   console.log(longitude);
+  // }, [])
+
+
   return (
     <>
       <Navbar />
@@ -173,11 +190,11 @@ function DestBlogPage() {
 
 
         </div>
-        <div className="container">
+        <div className="container map">
           <Map
             initialViewState={{
-              longitude: -122.4,
-              latitude: 37.8,
+              longitude: 77.299492,
+              latitude: 30.172716,
               zoom: 14,
             }}
             style={{ width: 600, height: 400 }}
@@ -186,7 +203,7 @@ function DestBlogPage() {
               "pk.eyJ1IjoibWluaXByb2plY3RtaGEiLCJhIjoiY2wzbmR1NGF4MDNmcTNqcWRwYzg2aHo5aSJ9.bDU-fsoy9g3x9rm7n4RafA"
             }
           >
-            <Marker longitude={-122.4} latitude={37.8} color="red" />
+            <Marker longitude={77.299492} latitude={30.172716} color="red" />
           </Map>
         </div>
       </div>
