@@ -14,8 +14,8 @@ function DestBlogPage() {
   const [location, setLocation] = useState({});
   const [coordinates, setCoordinates] = useState({});
   const [error, setError] = useState("");
-  const[latitude,setLatitude] = useState("");
-  const[longitude,setLongitude] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
 
   let { id } = useParams();
   // const [viewport, setViewport]= useState({
@@ -29,16 +29,14 @@ function DestBlogPage() {
 
   // });
 
-  const getCoordinates = () =>{
-    Data.forEach(function(item){
-      if(item.state == location.statenames){
-         
+  const getCoordinates = () => {
+    Data.forEach(function (item) {
+      if (item.state == location.statenames) {
         setLatitude(item.latitude);
         setLongitude(item.longitude);
-
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     Axios({
@@ -85,7 +83,6 @@ function DestBlogPage() {
   //   getCoordinates()
   //   console.log(longitude);
   // }, [])
-
 
   return (
     <>
@@ -169,7 +166,9 @@ function DestBlogPage() {
           </h1>
           <p className="py-2 info-intro">{location.ataglimse}</p>
           <h2 className="info-subheading">
-            <span style={{ fontWeight: "200" }}><strong>Capital: </strong></span>
+            <span style={{ fontWeight: "200" }}>
+              <strong>Capital: </strong>
+            </span>
             <span style={{ fontWeight: "500", color: "rgb(75, 75, 214)" }}>
               {location.cap}
             </span>
@@ -178,17 +177,22 @@ function DestBlogPage() {
 
           <p className="mt-3 info-para">{location.gettingaround}</p>
 
-          <p className="mt-3 info-para"><strong>How to reach:</strong> {location.howtoreach}</p>
+          <p className="mt-3 info-para">
+            <strong>How to reach:</strong> {location.howtoreach}
+          </p>
 
-          <p className="mt-3 info-para"><strong>Tourist Attractions:</strong> {location.touristatt}</p>
+          <p className="mt-3 info-para">
+            <strong>Tourist Attractions:</strong> {location.touristatt}
+          </p>
 
-          <p className="mt-3 info-para"><strong>Best Time to Visit:</strong> {location.besttime}</p>
+          <p className="mt-3 info-para">
+            <strong>Best Time to Visit:</strong> {location.besttime}
+          </p>
 
-          
-
-          <p className="mt-3 info-para"><strong>Regions: </strong>{location.reg}</p>
-
-
+          <p className="mt-3 info-para">
+            <strong>Regions: </strong>
+            {location.reg}
+          </p>
         </div>
         <div className="container map">
           <Map
@@ -204,6 +208,28 @@ function DestBlogPage() {
             }
           >
             <Marker longitude={77.299492} latitude={30.172716} color="red" />
+            <Marker longitude={77.384117} latitude={27.897551} color="red" />
+            <Marker longitude={77.332024} latitude={28.148735} color="red" />
+            <Marker longitude={76.693245} latitude={29.138407} color="red" />
+            <Marker longitude={76.119247} latitude={29.592957} color="red" />
+            <Marker longitude={76.606613} latitude={28.895515} color="red" />
+            <Marker longitude={75.025505} latitude={29.536535} color="red" />
+            <Marker longitude={75.455215} latitude={29.511778} color="red" />
+            <Marker longitude={76.990547} latitude={29.685629} color="red" />
+            <Marker longitude={76.977081} latitude={29.398928} color="red" />
+            <Marker longitude={76.919998} latitude={28.68} color="red" />
+            <Marker longitude={76.817825} latitude={29.962072} color="red" />
+            <Marker longitude={76.316666} latitude={29.316668} color="red" />
+            <Marker longitude={76.854172} latitude={30.695202} color="red" />
+            <Marker longitude={76.776695} latitude={30.37818} color="red" />
+            <Marker longitude={76.101479} latitude={28.065796} color="red" />
+            <Marker longitude={76.816902} latitude={30.642803} color="red" />
+            <Marker longitude={77.091492} latitude={28.928574} color="red" />
+            <Marker longitude={76.878281} latitude={29.969513} color="red" />
+            <Marker longitude={75.965996} latitude={29.102377} color="red" />
+            <Marker longitude={76.133514} latitude={28.799046} color="red" />
+            <Marker longitude={76.39772} latitude={29.121574} color="red" />
+            <Marker longitude={77.026344} latitude={28.457523} color="red" />
           </Map>
         </div>
       </div>

@@ -1,218 +1,256 @@
 export default [
   {
-    "slno": 0,
-    "abb": "AN",
-    "name": "Andaman and Nicobar Islands",
-    "state": "andaman-and-nicobar"
+    slno: 0,
+    abb: "AN",
+    name: "Andaman and Nicobar Islands",
+    state: "andaman-and-nicobar",
+
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 1,
-    "abb": "AP",
-    "name": "Andhra Pradesh",
-    "state": "andhra-pradesh"
+    slno: 1,
+    abb: "AP",
+    name: "Andhra Pradesh",
+    state: "andhra-pradesh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 2,
-    "abb": "AR",
-    "name": "Arunachal Pradesh",
-    "state": "arunachal-pradesh"
+    slno: 2,
+    abb: "AR",
+    name: "Arunachal Pradesh",
+    state: "arunachal-pradesh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 3,
-    "abb": "AS",
-    "name": "Assam",
-    "state": "assam"
+    slno: 3,
+    abb: "AS",
+    name: "Assam",
+    state: "assam",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 4,
-    "abb": "BR",
-    "name": "Bihar",
-    "state": "bihar"
+    slno: 4,
+    abb: "BR",
+    name: "Bihar",
+    state: "bihar",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 5,
-    "abb": "CG",
-    "name": "Chandigarh",
-    "state": "chandigarh"
+    slno: 5,
+    abb: "CG",
+    name: "Chandigarh",
+    state: "chandigarh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 6,
-    "abb": "CH",
-    "name": "Chhattisgarh",
-    "state": "chattishgarh"
+    slno: 6,
+    abb: "CH",
+    name: "Chhattisgarh",
+    state: "chattishgarh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 7,
-    "abb": "DH",
-    "name": "Dadra and Nagar Haveli",
-    "state": "dadra-and-nagar"
+    slno: 7,
+    abb: "DH",
+    name: "Dadra and Nagar Haveli",
+    state: "dadra-and-nagar",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 8,
-    "abb": "DD",
-    "name": "Daman and Diu",
-    "state": "daman-and-diu"
+    slno: 8,
+    abb: "DD",
+    name: "Daman and Diu",
+    state: "daman-and-diu",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 9,
-    "abb": "DL",
-    "name": "Delhi",
-    "state": "delhi"
+    slno: 9,
+    abb: "DL",
+    name: "Delhi",
+    state: "delhi",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 10,
-    "abb": "GA",
-    "name": "Goa",
-    "state": "goa"
+    slno: 10,
+    abb: "GA",
+    name: "Goa",
+    state: "goa",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 11,
-    "abb": "GJ",
-    "name": "Gujarat",
-    "state": "gujrat"
+    slno: 11,
+    abb: "GJ",
+    name: "Gujarat",
+    state: "gujrat",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 12,
-    "abb": "HR",
-    "name": "Haryana",
-    "state": "haryana"
+    slno: 12,
+    abb: "HR",
+    name: "Haryana",
+    state: "haryana",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 13,
-    "abb": "HP",
-    "name": "Himachal Pradesh",
-    "state": "himachal-pradesh"
+    slno: 13,
+    abb: "HP",
+    name: "Himachal Pradesh",
+    state: "himachal-pradesh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 14,
-    "abb": "JK",
-    "name": "Jammu and Kashmir",
-    "state": "jammu-and-kashmir"
+    slno: 14,
+    abb: "JK",
+    name: "Jammu and Kashmir",
+    state: "jammu-and-kashmir",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 15,
-    "abb": "JH",
-    "name": "Jharkhand",
-    "state": "jharkhand"
+    slno: 15,
+    abb: "JH",
+    name: "Jharkhand",
+    state: "jharkhand",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 16,
-    "abb": "KA",
-    "name": "Karnataka",
-    "state": "karnataka"
+    slno: 16,
+    abb: "KA",
+    name: "Karnataka",
+    state: "karnataka",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 17,
-    "abb": "KL",
-    "name": "Kerala",
-    "state": "kerala"
+    slno: 17,
+    abb: "KL",
+    name: "Kerala",
+    state: "kerala",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 18,
-    "abb": "LD",
-    "name": "Lakshadweep",
-    "state": "lakshadweep"
+    slno: 18,
+    abb: "LD",
+    name: "Lakshadweep",
+    state: "lakshadweep",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 19,
-    "abb": "MP",
-    "name": "Madhya Pradesh",
-    "state": "madhya-pradesh"
+    slno: 19,
+    abb: "MP",
+    name: "Madhya Pradesh",
+    state: "madhya-pradesh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 20,
-    "abb": "MH",
-    "name": "Maharashtra",
-    "state": "maharashtra"
+    slno: 20,
+    abb: "MH",
+    name: "Maharashtra",
+    state: "maharashtra",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 21,
-    "abb": "MN",
-    "name": "Manipur",
-    "state": "manipur"
+    slno: 21,
+    abb: "MN",
+    name: "Manipur",
+    state: "manipur",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 22,
-    "abb": "ML",
-    "name": "Meghalaya",
-    "state": "meghalaya"
+    slno: 22,
+    abb: "ML",
+    name: "Meghalaya",
+    state: "meghalaya",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 23,
-    "abb": "MZ",
-    "name": "Mizoram",
-    "state": "mizoram"
+    slno: 23,
+    abb: "MZ",
+    name: "Mizoram",
+    state: "mizoram",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 24,
-    "abb": "NL",
-    "name": "Nagaland",
-    "state": "nagaland"
+    slno: 24,
+    abb: "NL",
+    name: "Nagaland",
+    state: "nagaland",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 25,
-    "abb": "OR",
-    "name": "Odisha",
-    "state": "odhisha"
+    slno: 25,
+    abb: "OR",
+    name: "Odisha",
+    state: "odhisha",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 26,
-    "abb": "PY",
-    "name": "Puducherry",
-    "state": "puducherry"
+    slno: 26,
+    abb: "PY",
+    name: "Puducherry",
+    state: "puducherry",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 27,
-    "abb": "PB",
-    "name": "Punjab",
-    "state": "punjab"
+    slno: 27,
+    abb: "PB",
+    name: "Punjab",
+    state: "punjab",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 28,
-    "abb": "RJ",
-    "name": "Rajasthan",
-    "state": "rajasthan"
+    slno: 28,
+    abb: "RJ",
+    name: "Rajasthan",
+    state: "rajasthan",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 29,
-    "abb": "SK",
-    "name": "Sikkim",
-    "state": "sikkim"
+    slno: 29,
+    abb: "SK",
+    name: "Sikkim",
+    state: "sikkim",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 30,
-    "abb": "TN",
-    "name": "Tamil Nadu",
-    "state": "tamil-nadu"
+    slno: 30,
+    abb: "TN",
+    name: "Tamil Nadu",
+    state: "tamil-nadu",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 31,
-    "abb": "TS",
-    "name": "Telangana",
-    "state": "telangana"
+    slno: 31,
+    abb: "TS",
+    name: "Telangana",
+    state: "telangana",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 32,
-    "abb": "TR",
-    "name": "Tripura",
-    "state": "tripura"
+    slno: 32,
+    abb: "TR",
+    name: "Tripura",
+    state: "tripura",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 33,
-    "abb": "UK",
-    "name": "Uttar Pradesh",
-    "state": "uttar-pradesh"
+    slno: 33,
+    abb: "UK",
+    name: "Uttar Pradesh",
+    state: "uttar-pradesh",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 34,
-    "abb": "UP",
-    "name": "Uttarakhand",
-    "state": "uttarakhand"
+    slno: 34,
+    abb: "UP",
+    name: "Uttarakhand",
+    state: "uttarakhand",
+    link: "/blogs/626d20454f9e8e795bb9f95d",
   },
   {
-    "slno": 35,
-    "abb": "WB",
-    "name": "West Bengal",
-    "state": "west-bengal"
-  }
-]
+    slno: 35,
+    abb: "WB",
+    name: "West Bengal",
+    state: "west-bengal",
+  
+    link: "/blogs/626d20454f9e8e795bb9f95d"
+  },
+];

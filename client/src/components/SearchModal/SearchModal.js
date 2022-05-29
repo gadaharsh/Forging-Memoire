@@ -20,7 +20,7 @@ import { Container } from "@material-ui/core";
 
 const LocationText = (props) => {
   return (
-    <Link to="/home" className="linkLocation">
+    <Link to={props.link} className="linkLocation">
       <div className="d-flex  ">
         <LocationOnIcon style={{ color: "#2196F3" }} />
         <p>{props.state}</p>
@@ -50,18 +50,21 @@ const dataNoQuery = [
     abb: "AN",
     name: "Andaman and Nicobar Islands",
     state: "andaman-and-nicobar",
+    link: "/blogs/626d20444f9e8e795bb9f955"
   },
   {
     slno: 5,
     abb: "CG",
-    name: "Chandigarh",
-    state: "chandigarh",
+    name: "Gujarat",
+    state: "Gujarat",
+    link: "/blogs/626d20454f9e8e795bb9f961"
   },
   {
     slno: 10,
     abb: "GA",
     name: "Goa",
     state: "goa",
+    link: "/blogs/626d20454f9e8e795bb9f95d"
   },
 ];
 
@@ -140,15 +143,18 @@ const SearchModal = (props) => {
           </div>
           <Grid container className="placeContainer">
             {filterItems.map((value) => (
+              
+         
+                
               <Grid item xs={6} className="place">
-                <LocationText key={value.id} state={value.name} />
-              </Grid>
+                <LocationText key={value.id} state={value.name} link={value.link} />
+              </Grid> 
             ))}
           </Grid>
         </Container>
         <Divider variant="middle" />
         <Container className="pt-2 my-1">
-          <Button className="destinationbutton">View all destinations</Button>
+          <Button className="destinationbutton" href="/blogs" >View all destinations</Button>
         </Container>
       </Box>
     </Modal>
